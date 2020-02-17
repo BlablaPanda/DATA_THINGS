@@ -1,0 +1,39 @@
+I.Introduction au data-mining
+
+1.into
+
+def:
+application des technique statistiques et des techologies de l'information
+le but data mining -> découvirir des structures dans de vastes ensembles de données
+
+2.historique et définitions
+  
+  2.1 donées
+  Extraction de connaissances à aprtir d'un ensemble de données.
+  2.1.1 données
+  données opérationelles (transactionnelles): varient régulièrement(ex ticket caisse) sans optique d'analyse a priori, analyse secondaire
+  données non-opérationnelles (de référence): ne varient pas ou peu (ex addresse de client)
+  méta-données: des données portant sur la donnée elle-même(le numéro de la caisse où gnénéré le ticket)
+  2.1.2 connaissances
+  des assosiations et relations entre toutes ces données
+  2.1.3 découverte de connaissances
+  Knoowledge dicovery in Data bases (kdd)
+  sélectionner,pré-traiter,transformer,extraire,interpréter et évaluer (schéma des étapes du kdd)
+  
+  2.2 l'érmergence du data-mining
+  2.2.1 seceurs
+  secteur bancare: scoring
+  grand distribution
+  téléphonie: text mining
+  secteur médical: image mining
+  industrie automobile: accident
+  politique
+  2.2.2 les facteurs de l'émergence
+ 
+ 2.3 une évoluton au cours du temps
+ 2.3.1 Des donées de plus en plus volumineuses
+ 2.3.2 les âges de la statistique
+ 1990-2010 data-mining (web, données important,variées, peu de qualité,les échantillons ne sont plus représentatif) 
+ 2010-mtn big data & machine learning(5v volume,vélocité,variété,valeur:répondre à la question d'intérêt, véracité: connaitre qualité)
+ 
+ 
