@@ -96,5 +96,13 @@ le but data mining -> découvirir des structures dans de vastes ensembles de don
         
       méthodes de recherche de règles d'association:
         très applicqué aux marketing
-
+        
+      3.2.2 Méthodes supervisées
+      quantitative(la variable à expliquer, problème de regression) et qualitative(problème de classement)
+      3.2.2.1 réponse quantitative
+      - modèle linaire (régression linéaire, d'Anova, d'Ancova(variables quantitatives et qualitatives) = méthode paramétrique car elle fixe à travers le choix d'une fonction. 
+        il existe aussi des méthodes de régresssion non paramétriques où la nature du lien est dictée par les données elle-mêmes (e.g. méthodes à noyau, polynômes locaux).
+      - l'arbre de régression appliquée quelle que soit la nature et le nombre de variable expliquative. 
+        (<>modèle linéaire , cette méthode est non-paramétrique, le lien entre les variables à expliquer et explicative n'est pas défini à priori)
+      
  
