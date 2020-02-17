@@ -30,24 +30,71 @@ le but data mining -> découvirir des structures dans de vastes ensembles de don
   politique
   2.2.2 les facteurs de l'émergence
  
- 2.3 une évoluton au cours du temps
- 2.3.1 Des donées de plus en plus volumineuses
- 2.3.2 les âges de la statistique
- 1990-2010 data-mining (web, données important,variées, peu de qualité,les échantillons ne sont plus représentatif) 
- 2010-mtn big data & machine learning(5v volume,vélocité,variété,valeur:répondre à la question d'intérêt, véracité: connaitre qualité)
+  2.3 une évoluton au cours du temps
+  2.3.1 Des donées de plus en plus volumineuses
+  2.3.2 les âges de la statistique
+    1990-2010 data-mining (web, données important,variées, peu de qualité,les échantillons ne sont plus représentatif) 
+    2010-mtn big data & machine learning(5v volume,vélocité,variété,valeur:répondre à la question d'intérêt, véracité: connaitre qualité)
 
 3 Effectuer une étude de data-mining
 
-3.1 le data-mining étape par étape
+  3.1 le data-mining étape par étape
 
-3.1.1 Comprendre et analyse les objectifs de l'étude
-participation de moa(marketing,utilisateur) moe(statisiticiens, informaticien)
-3.1.2 Création d'une base de données
-DataWarehouse normalisé,homogénéisées de façon à être compréhensibles par tous
-non-vlatiles: ne sont jamais écrasées par de nouvevelles données.
-3.1.3 Prétraitement et nettoyage des données (valeurs erronées ou format peu pertinents)
-3.1.4 Réduction des données
+    3.1.1 Comprendre et analyse les objectifs de l'étude
+    participation de moa(marketing,utilisateur) moe(statisiticiens, informaticien)
 
+    3.1.2 Création d'une base de données
+     DataWarehouse normalisé,homogénéisées de façon à être compréhensibles par tous
+     non-vlatiles: ne sont jamais écrasées par de nouvevelles données.
 
+     3.1.3 Prétraitement et nettoyage des données (valeurs erronées ou format peu pertinents)
+
+     3.1.4 Réduction des données
+      -réduire la dimension des données
+      -ignorer variables trop corrélées,fussionner des variable corrélées -> analyse fatorielle/analyse en composantes principales (acp)
+      -fusionner modalités rares, peu pertinents (pas d'accor,plutot pas d'accord -> avis négatif)
+      -échantillonner les données: tirage aléatoire, un plan assurant une résentativité.
+
+     3.1.5 Segmenter la population
+      la présence de groupes d'individus hétérogènes doit être prise en compte.
+      -segmentation non supervisée ?
+      -supérvisées ?
+
+      3.1.6 Choix et validation du modèle
+        le problème central
+
+     3.1.7 itérations du processus
+ 
+      3.1.8 Déploiement des modèles
+
+  3.2 Les outils du data-mining
+ 
+      data-mining vise à identifier des structures au sen de données, 
+      il y a deux types de structures:"les modèles et les patterns".
+      modèle: expliquer ou prédire une variable(réponse) à partir d'autre variable(explicatives)
+      pattenrs: associations qui concernet juste queleques indivius.
+      supervisé -> établir un lien entre variable réponse et variable explicatives
+      non supervisé-> mettre en évidence des associations fortes entre certaines variables.
+      
+      3.2.1 Méthodes non-supervisées
+      
+      métotodes d'ananlyse factorielles:
+      
+      approches géométriques qui consistent à résumer les données sous la forme de graphiques de dimension deux.
+      ->identifier les ressemblances, les reations et de résumer des groupes d'individus.
+      
+      méthodes de classification:
+     
+      à identifier des groupes d'individus homogènes.
+      
+      basées sur des modèles: 
+        faire l'hipothèse que chaque individu appartient à une classe, une fois les différentes distributions indentifiées on pourra établir la classe la plus probable
+      basées sur des distances:
+        hiérachique:
+        descendantes:
+        partitionnement: k-means, nuées dynamiques et cartes de kohonen
+        
+      méthodes de recherche de règles d'association:
+        très applicqué aux marketing
 
  
