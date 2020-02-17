@@ -10,31 +10,31 @@ le but data mining -> découvirir des structures dans de vastes ensembles de don
   
   2.1 donées
   Extraction de connaissances à aprtir d'un ensemble de données.
-  2.1.1 données
-  données opérationelles (transactionnelles): varient régulièrement(ex ticket caisse) sans optique d'analyse a priori, analyse secondaire
-  données non-opérationnelles (de référence): ne varient pas ou peu (ex addresse de client)
-  méta-données: des données portant sur la donnée elle-même(le numéro de la caisse où gnénéré le ticket)
-  2.1.2 connaissances
-  des assosiations et relations entre toutes ces données
-  2.1.3 découverte de connaissances
-  Knoowledge dicovery in Data bases (kdd)
-  sélectionner,pré-traiter,transformer,extraire,interpréter et évaluer (schéma des étapes du kdd)
+    2.1.1 données
+    données opérationelles (transactionnelles): varient régulièrement(ex ticket caisse) sans optique d'analyse a priori, analyse secondaire
+    données non-opérationnelles (de référence): ne varient pas ou peu (ex addresse de client)
+    méta-données: des données portant sur la donnée elle-même(le numéro de la caisse où gnénéré le ticket)
+    2.1.2 connaissances
+    des assosiations et relations entre toutes ces données
+    2.1.3 découverte de connaissances
+    Knoowledge dicovery in Data bases (kdd)
+    sélectionner,pré-traiter,transformer,extraire,interpréter et évaluer (schéma des étapes du kdd)
   
   2.2 l'érmergence du data-mining
-  2.2.1 seceurs
-  secteur bancare: scoring
-  grand distribution
-  téléphonie: text mining
-  secteur médical: image mining
-  industrie automobile: accident
-  politique
-  2.2.2 les facteurs de l'émergence
+    2.2.1 seceurs
+    secteur bancare: scoring
+    grand distribution
+    téléphonie: text mining
+    secteur médical: image mining
+    industrie automobile: accident
+    politique
+    2.2.2 les facteurs de l'émergence
  
   2.3 une évoluton au cours du temps
-  2.3.1 Des donées de plus en plus volumineuses
-  2.3.2 les âges de la statistique
-    1990-2010 data-mining (web, données important,variées, peu de qualité,les échantillons ne sont plus représentatif) 
-    2010-mtn big data & machine learning(5v volume,vélocité,variété,valeur:répondre à la question d'intérêt, véracité: connaitre qualité)
+    2.3.1 Des donées de plus en plus volumineuses
+    2.3.2 les âges de la statistique
+      1990-2010 data-mining (web, données important,variées, peu de qualité,les échantillons ne sont plus représentatif) 
+      2010-mtn big data & machine learning(5v volume,vélocité,variété,valeur:répondre à la question d'intérêt, véracité: connaitre qualité)
 
 3 Effectuer une étude de data-mining
 
@@ -99,10 +99,37 @@ le but data mining -> découvirir des structures dans de vastes ensembles de don
         
       3.2.2 Méthodes supervisées
       quantitative(la variable à expliquer, problème de regression) et qualitative(problème de classement)
+      
       3.2.2.1 réponse quantitative
-      - modèle linaire (régression linéaire, d'Anova, d'Ancova(variables quantitatives et qualitatives) = méthode paramétrique car elle fixe à travers le choix d'une fonction. 
+      - modèle linéaire (régression linéaire, d'Anova, d'Ancova(variables quantitatives et qualitatives) = méthode paramétrique car elle fixe à travers le choix d'une fonction. 
         il existe aussi des méthodes de régresssion non paramétriques où la nature du lien est dictée par les données elle-mêmes (e.g. méthodes à noyau, polynômes locaux).
       - l'arbre de régression appliquée quelle que soit la nature et le nombre de variable expliquative. 
         (<>modèle linéaire , cette méthode est non-paramétrique, le lien entre les variables à expliquer et explicative n'est pas défini à priori)
+      -réseaux neuronaux, le percetron multicouches.
       
- 
+      3.2.2.2 Réponse qualitative
+      -la régression logistique (un approche paramétrique, et régression linéaire sont modéle linéaire généralisé) à la base est à une variable réponse binaire (modèles logit ordonnées et multinomiaux : une varibla à plusieurs modalité)
+      -l'analyse discriminate linéaire (très proche de la régression logistique <> une hiypothése supplémentaire)
+      ces deux méthodes: trouver un hyperplan à sépare au mieux les classes
+      -Support Vector machines(SVM) pour une spéparation plus complexe
+      -l'arbre de classification.
+      
+      3.2.3 Méthodes avancées
+      pour stabiliser les méthodes
+      -plusieurs modèle puis à agréger: les forêts aléatories(une arbres de décision de régression ou de classification)
+      -apporche ridges : méthode linéaires généralisés (quand liaisons entre les variables explicatives sont top fortes ou nobmre d'individus est trop peit devant le nombre de variable)
+      -robustes : contre des valeurs aberrantes -> ajouter le modèle sur les individus les moins extremes
+      -parcimonieuses (sparse) : contre les données peu pertinentes.
+      
+      3.2.4 Des logiciels dédiés
+     
+      https://dev.kdnuggets.com/software/suites.html
+      R & data miner sont plus utilisés
+      
+   4.Consclusion
+   pas nécessaire d'analyser les données de plus en plus massives.
+   data-mining ne serait pas l'aternatives à des approches statistiques plus classiques->
+   difficile d'identifier des relations de cause à effet à appartir des analyses secondaires seules des associations peuvent être clairement identifiées
+   
+      
+      
