@@ -1,6 +1,6 @@
 I.Introduction au data-mining
 
-1.into
+1.intro
 
 def:
 application des technique statistiques et des techologies de l'information
@@ -35,5 +35,19 @@ le but data mining -> découvirir des structures dans de vastes ensembles de don
  2.3.2 les âges de la statistique
  1990-2010 data-mining (web, données important,variées, peu de qualité,les échantillons ne sont plus représentatif) 
  2010-mtn big data & machine learning(5v volume,vélocité,variété,valeur:répondre à la question d'intérêt, véracité: connaitre qualité)
- 
+
+3 Effectuer une étude de data-mining
+
+3.1 le data-mining étape par étape
+
+3.1.1 Comprendre et analyse les objectifs de l'étude
+participation de moa(marketing,utilisateur) moe(statisiticiens, informaticien)
+3.1.2 Création d'une base de données
+DataWarehouse normalisé,homogénéisées de façon à être compréhensibles par tous
+non-vlatiles: ne sont jamais écrasées par de nouvevelles données.
+3.1.3 Prétraitement et nettoyage des données (valeurs erronées ou format peu pertinents)
+3.1.4 Réduction des données
+
+
+
  
