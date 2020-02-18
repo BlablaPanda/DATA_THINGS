@@ -79,4 +79,36 @@ Méthodes descriptives:
             Quand le lien entre les variables n’est plus linéaire, on privilégiera un coefficient de corrélation basé sur les rangs des observations (cf Table 4.2) comme le coefficient de Spearman (noté rs) ou coefficient de Kendall (noté τ). Ces coefficients sont robustes aux valeurs aberrantes, mais ne permettent de détecter que des relations monotones entre les variables (tout comme le coefficient de corrélation linéaire).
             Le coefficient de Spearman: évalue la corrélation linéaire sur les rangs des observations, plutôt que sur les observations elles-mêmes.
             Le coefficient de Kendall:entre -1 et 1. Il vaut 1 si les paires sont toutes concordantes, et -1 si elles sont toutes discordantes. L’indépendance entre les variables implique la nullité du coefficient, mais la réciproque est à nouveau fausse.
-          
+    
+    4.2 Lien entre variables quantitatives et qualitatives
+      4.2.1  Représentation graphique
+       la distribution de la variable quantitative en fonction des modalités de la variable qualitative
+      4.2.2 Rapport de corrélation
+       ce coefficient évalue (à la fonction racine carré près) la part de variance de la variable quantitative qui peut être expliquée par la variable qualitative.  
+       La variance expliquée correspond à la dispersion des valeurs moyennes au sein de chaque sous-ensemble définis par la variable qualitative. 
+       Plus la variance expliquée est proche de la variabilité de Y, plus le rapport de corrélation est proche de 1. Dans le cas où les moyennes au sein de chaque sous ensemble sont identiques, la variance expliquée est nulle et le rapport de corrélation vaut 0.
+       ?Le test de Welch , ?un test de Fisher
+    
+     4.3 Lien entre variables qualitatives  
+      4.3.1 Table de contingence ?
+      4.3.2 Représentation graphique
+      -graphique en mosaïque  
+      4.3.3 Khi deux
+      -Khi-deux
+      -Coefficient T de Tschuprow
+      -Coefficient V de Cramer
+      es coefficients T de Tschuprow et V de Cramer sont compris entre 0 et 1, une valeur élevée traduisant une liaison forte, et une valeur proche de 0 une liaison faible.
+      
+5 Analyse multivariée
+
+  le nombre de variables devient élevé, il n’est plus envisageable de regarder tous les couples de variables deux à deux, car leur nombre devient rapidement trop grand, on préférera alors utiliser les approches multivariées.
+  -Les méthodes d’analyse factorielle sont utilisées pour identifier les relations entre variables ainsi que les ressemblances entre individus. Ces méthodes reposent sur des approches géométriques dont le principe est de réduire la dimension du jeu de données en effectuant des projections des données sur des espaces de dimension inférieure
+  -Les méthodes de classification (non-supervisées) permettent de répondre aux mêmes objectifs, en construisant une partition des individus, ou des variables, à partir de l’ensemble des données.
+  
+  5.1 Données quantitatives
+    5.1.1 Analyse en composantes principales (ACP)
+      5.1.1.1 Principe de la méthode
+      l’ACP consiste à rechercher un sous-espace (par exemple un plan) dans le nuage des individus tel que la projection du nuage sur ce sous-espace résume au ``mieux’‘le nuage initial. Le critère utilisé pour mesurer la qualité de la projection est l’inertie. 
+      L’inertie est une mesure de dispersion d’un nuage de points, elle peut être vue comme une généralisation de la notion de variance. 
+      Plus les individus sont éloignés les uns des autres, plus l’inertie du nuage est importante. Au contraire, si tous les individus sont identiques, alors l’inertie est nulle
+  
