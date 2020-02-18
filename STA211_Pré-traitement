@@ -67,6 +67,16 @@ Méthodes descriptives:
       3.2.3.2 Coefficient d’aplatissement: Le coefficient d’aplatissement de Fisher sert à comparer la concentration des valeurs à celle d’une loi normale centrée pour laquelle ce coefficient vaut 3. Un coefficient d’aplatissement positif indique une densité est plus concentrée que celle d’une distribution gaussienne, sinon il indique une densité moins concentrée. Cet indicateur, basé sur la moyenne empirique, est sensible aux valeurs aberrantes.
       
 4 Analyse bivarié
-      
-        
+      L’analyse univariée ne renseigne pas sur les relations entre les variables. On la complète par l’étude des relations entre les variables deux à deux, appelée analyse bivariée
+      L’analyse bivariée s’effectue à nouveau par l’intermédiaire de graphiques et également par la lecture d’indicateurs quantifiant la liaison entre les variables. Ceux-ci dépendent à nouveau de la nature des deux variables étudiées.
     
+    4.1 Lien entre variables quantitatives  
+      4.1.1 Représentation graphique: 
+            nuage de points,centrées-réduite ou des échelles telleques que ce soit sensiblement ces variables là qye l'on représente.
+      4.1.2 Corrélation:
+            le coefficient de corrélation linéaire (ou son estimation) est compris entre -1 et 1.
+            l’indépendance entre les variables implique que ρ=0, la nullité du coefficient n’implique pas l’indépendance entre les variables, mais simplement une absence de lien linéaire.
+            Quand le lien entre les variables n’est plus linéaire, on privilégiera un coefficient de corrélation basé sur les rangs des observations (cf Table 4.2) comme le coefficient de Spearman (noté rs) ou coefficient de Kendall (noté τ). Ces coefficients sont robustes aux valeurs aberrantes, mais ne permettent de détecter que des relations monotones entre les variables (tout comme le coefficient de corrélation linéaire).
+            Le coefficient de Spearman: évalue la corrélation linéaire sur les rangs des observations, plutôt que sur les observations elles-mêmes.
+            Le coefficient de Kendall:
+          
