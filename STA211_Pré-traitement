@@ -24,3 +24,23 @@ Méthodes descriptives:
               La fréquence relative de la modalité
               -> identifier modalités rares et trop grand nombre de modalités sur des variables explicatives d’un modèle peut entraîner une grande instabilité sur l’estimation des coefficients de ce modèle.
       3.1.1.2 Variables qualitatives ordinales:
+              fréquences absolues cumulées (permet de savoir l'interface de une plage de valeur ?)
+              fréquences relatives cumulées
+    
+    3.1.2 Varaible quantitatives   
+    
+     3.1.2.1 Variables quantitatives dicrètes :
+      -Une variable quantitative discrète est une variable à valeurs dans un espace dénombrable
+      -Quand le nombre de valeurs observées devient élevé, il pourra être parfois intéressant d’utiliser une représentation tige-et-feuille(https://fr.khanacademy.org/math/statistics-probability/displaying-describing-data/quantitative-data-graphs/a/stem-and-leaf-plots-review).
+      -Statistique d’ordre:our une série statistique (x1,…,xn), on range ses valeurs dans l’ordre croissant x(1)≤x(2)≤…≤x(n) le vecteur (x(1),…,x(n)) est appelé statistique d’ordre de la série  (https://fr.wikipedia.org/wiki/Statistique_d%27ordre)
+      -Fonction de répartition empirique:
+     3.1.2.2 Variables quantitatives continues 
+      -Classe, Amplitude, Effectif d'une classe, Fréquence d'une classe
+      -Le nombre de classes pourra par exemple être choisi selon la règle de Sturges préconisant de choisir k=1+ln(n)/ln(2) classes
+      -histogramme: Un histogramme dont les amplitudes des classes sont fixes sera appelé histogramme à pas fixe, dans le cas contraire on parlera d’histogramme à pas variable. 
+      Age avec une queue à droite. On pourra parfois être amené à transformer cette variable de façon à se ramener à une distribution approximativement normale (e.g. si on souhaite par la suite effectuer une analyse discriminante linéaire qui repose sur la multinormalité des variables). 
+      -queue à droit: Les transformations les plus courantes sont la transformation logarithmique ou racine carrée pour les variables positives (en ajoutant éventuellement la valeur 1 pour gérer les zéros) asymétriques à droite, 
+      -queue à gauche: tandis qu’on utilisera plutôt une transformation puissance (2 ou 3) pour les asymétries à gauche. 
+      -Dans le cas de proportion, on pourra utiliser la transformation arcsinus.
+      
+      
