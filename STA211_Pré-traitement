@@ -78,5 +78,5 @@ Méthodes descriptives:
             l’indépendance entre les variables implique que ρ=0, la nullité du coefficient n’implique pas l’indépendance entre les variables, mais simplement une absence de lien linéaire.
             Quand le lien entre les variables n’est plus linéaire, on privilégiera un coefficient de corrélation basé sur les rangs des observations (cf Table 4.2) comme le coefficient de Spearman (noté rs) ou coefficient de Kendall (noté τ). Ces coefficients sont robustes aux valeurs aberrantes, mais ne permettent de détecter que des relations monotones entre les variables (tout comme le coefficient de corrélation linéaire).
             Le coefficient de Spearman: évalue la corrélation linéaire sur les rangs des observations, plutôt que sur les observations elles-mêmes.
-            Le coefficient de Kendall:
+            Le coefficient de Kendall:entre -1 et 1. Il vaut 1 si les paires sont toutes concordantes, et -1 si elles sont toutes discordantes. L’indépendance entre les variables implique la nullité du coefficient, mais la réciproque est à nouveau fausse.
           
