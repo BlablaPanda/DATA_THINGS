@@ -38,9 +38,35 @@ Méthodes descriptives:
       -Classe, Amplitude, Effectif d'une classe, Fréquence d'une classe
       -Le nombre de classes pourra par exemple être choisi selon la règle de Sturges préconisant de choisir k=1+ln(n)/ln(2) classes
       -histogramme: Un histogramme dont les amplitudes des classes sont fixes sera appelé histogramme à pas fixe, dans le cas contraire on parlera d’histogramme à pas variable. 
-      Age avec une queue à droite. On pourra parfois être amené à transformer cette variable de façon à se ramener à une distribution approximativement normale (e.g. si on souhaite par la suite effectuer une analyse discriminante linéaire qui repose sur la multinormalité des variables). 
-      -queue à droit: Les transformations les plus courantes sont la transformation logarithmique ou racine carrée pour les variables positives (en ajoutant éventuellement la valeur 1 pour gérer les zéros) asymétriques à droite, 
-      -queue à gauche: tandis qu’on utilisera plutôt une transformation puissance (2 ou 3) pour les asymétries à gauche. 
-      -Dans le cas de proportion, on pourra utiliser la transformation arcsinus.
+        Age avec une queue à droite. On pourra parfois être amené à transformer cette variable de façon à se ramener à une distribution approximativement normale (e.g. si on souhaite par la suite effectuer une analyse discriminante linéaire qui repose sur la multinormalité des variables). 
+        -queue à droit: Les transformations les plus courantes sont la transformation logarithmique ou racine carrée pour les variables positives (en ajoutant éventuellement la valeur 1 pour gérer les zéros) asymétriques à droite, 
+        -queue à gauche: tandis qu’on utilisera plutôt une transformation puissance (2 ou 3) pour les asymétries à gauche. 
+        -Dans le cas de proportion, on pourra utiliser la transformation arcsinus.
+        un histogramme peut être vu comme une estimation de la fonction de densité d’une variable continue
+       
+   3.2 Indicateurs numériques
+   
+    3.2.1 Indicateurs de tendance centrale
+      l’ordre de grandeur de la variable en donnant une valeur autour de laquelle les valeurs de la série se répartissent
+      3.2.1.1 Moyenne empirique, moyenne, médiane, mode(e mode est défini comme la valeur la plus fréquente de la série)
+    
+    3.2.2 Indicateur de dispersion  
+      sur la variabilité de la série, généralement autour d’un indicateur de tendance centrale
+      3.2.2.1 Variance empirique
+      3.2.2.2 Coefficient de variation empirique : En pratique, on utilise le seuil de 0.15 pour établir une faible/forte variabilité
+      3.2.2.3 Etendue: la différence du maximum et du minimum de la série,c’est un indicateur évidemment très sensible aux valeurs aberrantes. Quand on dispose de mesures d’un même caractère à des différents temps, la comparaison des étendues pour les différents temps permettra de détecter des valeurs aberrantes.
+      3.2.2.4 Quantiles:la série ordonnée en un certain nombre de parties de même effectif 
+              diagramme quantile-quantile ou qq-plot. Si les quantiles empiriques et théoriques sont proches, alors il sera raisonnable de penser que la distribution de la variable correspond bien à la distribution théorique considérée.
+      3.2.2.5 Distance inter-quartiles
+      3.2.2.6 Représentation
+              une boîte à moustaches( diagramme en boîte,boxplot):https://www.stat4decision.com/fr/le-box-plot-ou-la-fameuse-boite-a-moustache/
+    
+    3.2.3 Indicateurs de forme
+      les indicateurs de forme qui permettent notamment d’apprécier le caractère gaussien des données
+      3.2.3.1 Coefficient d’asymétrie: Le coefficient d’asymétrie de Fisher vaut 0 pour une série dont la répartition est symétrique (e.g. loi normale), est positif si la queue de la distribution est à droite (e.g. loi exponentielle), et négatif si la queue de la distribution est à gauche. Il est sensible aux variations des valeurs aberrantes, au même titre que la moyenne ou la variance.
+      3.2.3.2 Coefficient d’aplatissement: Le coefficient d’aplatissement de Fisher sert à comparer la concentration des valeurs à celle d’une loi normale centrée pour laquelle ce coefficient vaut 3. Un coefficient d’aplatissement positif indique une densité est plus concentrée que celle d’une distribution gaussienne, sinon il indique une densité moins concentrée. Cet indicateur, basé sur la moyenne empirique, est sensible aux valeurs aberrantes.
       
+4 Analyse bivarié
       
+        
+    
