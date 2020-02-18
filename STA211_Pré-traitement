@@ -1,0 +1,26 @@
+Méthodes descriptives:
+
+1 Introduction
+
+  méthode statistiques pour néttoyer les données manquates,valeurs erronées, valeurs abberantes etc
+
+2 Données German Credit
+  1000 dossiers, 300 impayés, 20 variable
+  https://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data
+  https://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.doc
+  
+3. Analyse univariée
+   L’analyse univariée des variables renseigne sur leur distribution, dite distribution marginale (par opposition à la distribution jointe qui correspond à la distribution d’un ensemble de plusieurs variables). Cette analyse permettra notamment d’identifier des valeurs aberrantes, et de connaître des caractéristiques de la distribution (e.g. son caractère gaussien). 
+   Une donnée sera considérée comme aberrante si elle n’est pas issue du même modèle que celui qui tient pour la majorité des données. 
+   n: nombre d'indivius
+   X: une variables
+   
+   3.1 Représentations graphiques
+   
+    3.1.1 Variables qualitatives
+      On appelle variable qualitative une variable dont les valeurs sont non-numériques(<>codage) , on parle de modalités(valeurs possibles d'attributs(column))
+      3.1.1.1 Variables qualitatives nominales: 
+              La fréquence absolue de la modalité
+              La fréquence relative de la modalité
+              -> identifier modalités rares et trop grand nombre de modalités sur des variables explicatives d’un modèle peut entraîner une grande instabilité sur l’estimation des coefficients de ce modèle.
+      3.1.1.2 Variables qualitatives ordinales:
