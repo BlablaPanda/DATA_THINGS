@@ -110,5 +110,9 @@ Méthodes descriptives:
       5.1.1.1 Principe de la méthode
       l’ACP consiste à rechercher un sous-espace (par exemple un plan) dans le nuage des individus tel que la projection du nuage sur ce sous-espace résume au ``mieux’‘le nuage initial. Le critère utilisé pour mesurer la qualité de la projection est l’inertie. 
       L’inertie est une mesure de dispersion d’un nuage de points, elle peut être vue comme une généralisation de la notion de variance. 
-      Plus les individus sont éloignés les uns des autres, plus l’inertie du nuage est importante. Au contraire, si tous les individus sont identiques, alors l’inertie est nulle
-  
+      L’objectif de l’ACP consiste alors à rechercher un sous-espace tel que l’inertie du nuage projeté sur ce sous-espace soit la plus grande possible, de façon à ce que la diversité des positions des individus projetés reflète au mieux la diversité des profils avant projection. 
+      https://www.youtube.com/watch?v=_UVHneBUBW0
+      
+      5.1.1.2 Individus et variables supplémentaires
+      
+     
