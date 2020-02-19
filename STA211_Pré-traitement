@@ -118,4 +118,7 @@ Méthodes descriptives:
       On calcule la contribution d’un individu à la construction d’un plan en sommant les contributions à la construction des différents axes qui le composent. La simple lecture des contributions permet ainsi d’identifier les potentielles valeurs aberrantes. Plutôt que de supprimer purement et simplement les individus aberrants (i.e. aux grandes contributions), on peut les considérer comme des individus supplémentaires (ou individus illustratifs).
       Il s’agit de projeter ces individus sur le sous-espace sans qu’ils interviennent dans la construction des axes. Pour cela, on leur affecte un poids nul, ce qui implique que les axes seront construits sans ces individus, et on les projette ensuite a posteriori sur le sous-espace une fois les axes construits, ce qui permet néanmoins de les positionner par rapport aux autres. Par opposition, les individus qui contribuent à la construction des axes sont appelés des individus actifs.
     
-    5.1.2
+    5.1.2 Application au jeu German Credit
+    cercle des corrélations met en évidence deux groupes de variables positivement corrélées entre elles
+    l’ACP peut permettre d’identifier d’éventuelles valeurs aberrantes via la visualisation du graphe des individus
+    il est possible d’analyser les relations entre les variables qualitatives et les composantes principales (résumant les relations entre variables quantitatives). Ceci permet de faire le lien entre les coordonnées des individus sur un axe et ces variables. Pour cela on peut regarder directement le rapport de corrélation entre ces variables et les différentes composantes
