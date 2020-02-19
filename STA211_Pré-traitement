@@ -111,9 +111,11 @@ Méthodes descriptives:
       l’ACP consiste à rechercher un sous-espace (par exemple un plan) dans le nuage des individus tel que la projection du nuage sur ce sous-espace résume au ``mieux’‘le nuage initial. Le critère utilisé pour mesurer la qualité de la projection est l’inertie. 
       L’inertie est une mesure de dispersion d’un nuage de points, elle peut être vue comme une généralisation de la notion de variance. 
       L’objectif de l’ACP consiste alors à rechercher un sous-espace tel que l’inertie du nuage projeté sur ce sous-espace soit la plus grande possible, de façon à ce que la diversité des positions des individus projetés reflète au mieux la diversité des profils avant projection. 
-      https://www.youtube.com/watch?v=_UVHneBUBW0
+      https://www.youtube.com/watch?v=FgakZw6K1QQ
       http://maths.cnam.fr/IMG/pdf/A-C-P-.pdf
       
       5.1.1.2 Individus et variables supplémentaires
-      
-     
+      On calcule la contribution d’un individu à la construction d’un plan en sommant les contributions à la construction des différents axes qui le composent. La simple lecture des contributions permet ainsi d’identifier les potentielles valeurs aberrantes. Plutôt que de supprimer purement et simplement les individus aberrants (i.e. aux grandes contributions), on peut les considérer comme des individus supplémentaires (ou individus illustratifs).
+      Il s’agit de projeter ces individus sur le sous-espace sans qu’ils interviennent dans la construction des axes. Pour cela, on leur affecte un poids nul, ce qui implique que les axes seront construits sans ces individus, et on les projette ensuite a posteriori sur le sous-espace une fois les axes construits, ce qui permet néanmoins de les positionner par rapport aux autres. Par opposition, les individus qui contribuent à la construction des axes sont appelés des individus actifs.
+    
+    5.1.2
