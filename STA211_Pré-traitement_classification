@@ -1,0 +1,17 @@
+1 Introduction
+
+Les méthodes d’analyse factorielle permettent de mettre en évidence les ressemblances entre individus 
+ainsi que les liaisons entre variables, 
+et ainsi d’identifier des groupes (ou classes) d’individus ou de variables similaires. 
+Néanmoins, ces groupes restent assez subjectifs dans le sens où les méthodes d’analyse factorielle ne permettent pas d’affecter de façon automatique et claire un objet (individu ou variable) à un groupe.
+
+La classification a pour objectif de former une (ou plusieurs) partition(s) d’objets, i.e. de définir K groupes d’objets (C1,...,CK) sans recouvrements ni intersections, de sorte que chaque objet soit affecté à un groupe et à un seul. 
+
+On parle également de segmentation, de clustering, ou de classification non-supervisée.
+
+individu en ligne, variable en column
+
+Ces groupes d’individus ne sont pas connus a priori
+
+2 Mathodes de partitionnement
+
