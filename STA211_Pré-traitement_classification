@@ -13,5 +13,38 @@ individu en ligne, variable en column
 
 Ces groupes d’individus ne sont pas connus a priori
 
+http://maths.cnam.fr/IMG/pdf/Classification-2008-2.pdf
+
+
 2 Mathodes de partitionnement
 
+Les méthodes de partitionnement consistent à définir une partition de l’ensemble des individus en K (défini à l’avance) groupes.
+k-means: centres mobiles
+
+  2.1 Agrégation autour des centres mobiles
+  
+      déjà définit dans ACP
+      
+      - la distance usuelle
+      - la distance usuelle pondérée par l’inverse de la variance
+      - la distance de Mahalanobis
+      
+       la pondération par l’inverse de la matrice de variance-covariance permet de diminuer l’influence de la covariance entre les variables.
+       on cherchera à minimiser l’inertie au sein des groupes constitués (inertie intra-classe), de façon à avoir des classes les plus homogènes possibles
+       Inertie Totale=Inertie inter-classes+Inertie intra-classe
+       K désigne le nombre de classes et k l’indice d’une de ces classes, 
+       nk désigne l’effectif de la classe Ck, 
+       G est le barycentre du nuage de points 
+       Gk le barycentre du sous nuage défini par la classe Ck.
+     
+     -> Trop grand pour mesure le nombre de partitions possible en K
+     -> L’algorithme d’agrégation autour des centres mobiles fournit une solution localement optimale à ce problème.
+     
+      2.1.1 Principe
+      1.insitialisation: au hasard = centres / noyau
+      2.Répéter: allouer,retrouver nouveau noyau, s'arrêter si le critère de variance intra-classe ne diminue plus
+      https://www.kdnuggets.com/2018/06/5-clustering-algorithms-data-scientists-need-know.html
+      
+      2.1.2 Propriétés
+      
+     
