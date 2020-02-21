@@ -49,4 +49,39 @@ k-means: centres mobiles
       
       2.1.3 Choix du nombre de classes
       
-     
+      2.1.4 Formes Fortes
+      
+      formes fortes:intersections des partitions obtenues
+                      Il est important de noter que le label (i.e. le numéro) d’une classe est purement arbitraire et que par conséquent, pour deux exécutions de l’algorithme, les partitions peuvent être identiques alors que les numéros des classes sont permutés
+      
+      si pour deux initialisations de l’algorithme (ou plus) un regroupement d’individus est toujours au sein d’une même classe, alors ceci indique que regroupement est stable
+      
+  2.2 Autres méthodes de patitionnement
+  
+  k−means de MacQueen :
+    réaffecter les centres dès qu’un individu change de classe, alors que précédemment l’étape de mise à jour des centres n’avait lieu qu’une fois tous les individus réalloués. 
+    Cette variante accélère la convergence, mais rend l’algorithme dépendant à l’ordre dans lequel les individus sont réalloués.
+  nuées dynamiques Diday: 
+    un mode de représentation d’un groupe d’individus différent de celui du barycentre
+    cela permet de corriger l’influence d’éventuelles valeurs extrêmes sur le calcul du barycentre.
+   méthode isodata par Ball and Hall :
+    un raffinement de la technique de réallocation dans la méthode des centres mobiles avec une gestion dynamique du nombre de classes
+    Elle permet notamment d’empêcher la formation de classes d’effectifs trop faibles ou de diamètres trop grands.
+ 
+3 Méthodes hiérarchiques    
+ 
+classification géométriques, Elles visent à construire non pas une partition, mais une suite de partitions imbriquées les unes dans les autres (arbre hiérarchique ou dendogramme).
+https://www.youtube.com/watch?v=SE_4dLh5vXY
+
+  3.1 Distance entre individus ou groupes
+  
+  La méthode de classification ascendante hiérarchique (CAH)
+  
+  mesure de dissimilarité entre individus :  une fonction de l’espace
+  
+  3.2 Algorithme de classification ascendante hiérarchique
+  
+  
+  
+
+
