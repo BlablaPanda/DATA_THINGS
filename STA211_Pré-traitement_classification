@@ -89,4 +89,42 @@ https://www.youtube.com/watch?v=SE_4dLh5vXY
   -> maximum intertie inter ou miniminiser intertie intra
   critère ward pemet d'éviter l'effet de chaine
 
+    3.2.1 Construction de la suite de partitions imbriquées:
+    
+    3.2.2 Construction de l’arbre hiérarchique
+  3.3 Choix du nombre de classes
+      
+    des individus d’une même classe partagent les mêmes propriétés (compacité).
+    des individus appartenant à des classes différentes aient peu de propriétés en commun (séparabilité).
+  
+  3.4 Propriétés
+  
+    3.4.1 Choix de la mesure de dissimilarité
+    
+    3.4.2 Choix du critère d’agrégation
+    
+   
+    
+4 Méthodes mixtes    
 
+L’idée de la classification mixte est alors de commencer par effectuer une agrégation autour des centres mobiles pour un grand nombre de classes (disons 50 pour fixer les idées). On réduit ainsi le nombre d’éléments à classer passant d’un nombre n d’individus potentiellement grand à un nombre modéré de classes. 
+
+5 Description des classes
+
+  5.1 Variables quantitatives
+  5.2 Variables qualitatives
+  
+6 Données qualitatives
+  Algorithme des k-modes
+  Quelques exemples de distances Euclidiennes
+  
+ 7 Complémentarité de l’analyse factorielle et des méthodes de classification
+ 
+ +il est généralement difficile d’interpréter les axes au-delà du plan principal. 
+ la visualisation des premiers axes ne reflète pas l’intégralité de la structure des données car une part de l’inertie est aussi portée par les derniers axes qui ne sont pas analysés.
+ La classification, elle, est effectuée sur l’intégralité des données. 
+ elle va permettre de visualiser l’information portée par l’ensemble des axes et donc d’enrichir l’interprétation et corriger les déformations liées à l’opération de projection.
+ 
+ +Aussi, ces méthodes d’analyse factorielle sont sensibles aux individus aberrants, ces individus influençant grandement la construction des axes. Au contraire, les méthodes de classification (hiérarchiques en particulier) sont peu sensibles localement aux points marginaux isolés : ces individus ne seront pas agrégés avec les autres dans la partie basse du dendogramme.
+  
+ + La représentation des classes sur les plans va permettre de simplifier la description des ressemblances et oppositions entre individus par une donnée plus synthétique
