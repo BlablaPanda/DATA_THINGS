@@ -1,0 +1,54 @@
+ Lundi 24 février: Chapitre Docker
+ Lundi 2 mars: modélisation de documents structurés (chapitre 3)
+   5 mars => regroupement par visio  
+ Lundi 9 mars: interrogation de bases structurées (chapitre 4)
+
+I.Introduction
+
+
+un chapitre par semaine
+4 grandes parties
+-modélisation sous forme de document
+-gestion de très grandes collections
+-distribution du stockage
+-distribution des caculs
+
+-Document (mongoDB, CouchDB, Cassandra)
+-Recherche(Solr,ElasticSearch)
+-stockage(MongoDB,ElasticSearch,Cassandra)
+-Calcul(Hadoop,Spark,Flink)
+
+Les projets + examens
+le rapport écrit 1/3 + examen 2/3
+
+
+Chapitre I Docker
+
+http://b3d.bdpedia.fr/docker.html
+Docker -> simuler un systeme distribué
+
+Définition de base
+-Un serveur machine (IP addresse internet)
+-un Serveur logiciel(un processus exécuté en tache de fond d'un serveur machine qui comunique avec des client (logiciels) via un port
+-Une machine virtuelle 
+-Un client(logiciel) un programme qui communique avec un serveur(logiciel)
+  On ne peut pas lancer deux serveur sur un même port
+  param: addresse IP, Port, Application de Client
+ 
+ Docker:
+  -créer des conteneurs linux (machine virtuelle simplifée)
+  -Cas OS/Win VM docker fournir Docker engine -> Créer des conteneur
+  -Architecture 
+    ->Système Hote 
+    -> Machine Docker 
+    -> Docker engine (gérer les conteneurs)
+    -> conteneur(une partie autonome de la docker VM se comporte comme une machine independante)
+    -> Client docker (client utilitaire communiquer avec la machine Docker envoyer les commande | ligne commande/interface comme kitmatic)
+   -Image = système pré-configuré, prêt à l'emploi (instantier)
+   -Communication:  service de hote -> VM port & VM Conteneur port  
+
+
+
+
+
+
