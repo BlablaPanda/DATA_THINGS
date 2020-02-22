@@ -44,9 +44,25 @@ Définition de base
     -> Docker engine (gérer les conteneurs)
     -> conteneur(une partie autonome de la docker VM se comporte comme une machine independante)
     -> Client docker (client utilitaire communiquer avec la machine Docker envoyer les commande | ligne commande/interface comme kitmatic)
+   
    -Image = système pré-configuré, prêt à l'emploi (instantier)
+   
    -Communication:  service de hote -> VM port & VM Conteneur port  
-
+   
+   -Pratique
+    -commande basic
+     docker-mahcine (gérer machine)
+     docker-machine ip
+     docker-machine stop
+     docker (gérer conteneur)
+     docker images
+     docker ps (conteneur installé)
+     docker start ID_conteneur (lancer conteneur)
+     docker run name_conteneur (installer conteneur)
+    -installer image
+     hub.docker.com -> pour trouver l'image proposé par docker + doc
+     docker run --name image -p port(machine:conteneur) -e option -d image_installé
+     
 
 
 
