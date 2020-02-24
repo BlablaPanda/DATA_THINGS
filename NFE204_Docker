@@ -3,7 +3,7 @@
    5 mars => regroupement par visio  
  Lundi 9 mars: interrogation de bases structurées (chapitre 4)
 
-I.Introduction
+1.I.Introduction
 
 
 un chapitre par semaine
@@ -22,7 +22,7 @@ Les projets + examens
 le rapport écrit 1/3 + examen 2/3
 
 
-Chapitre I Docker
+2. Chapitre I Docker
 
 http://b3d.bdpedia.fr/docker.html
 Docker -> simuler un systeme distribué
@@ -63,8 +63,35 @@ Définition de base
      hub.docker.com -> pour trouver l'image proposé par docker + doc
      docker run --name image -p port(machine:conteneur) -e option -d image_installé
      
+3.Modélisation de bases NoSQL
+
+ S.1 Document structure.
+ 
+  -Flexibilité: la structure doit pouvoir s’adapter à des variations plus ou moins importantes; prenons un document représentant un livre ou une documentation technique: on peut avoir (ou non) des annexes, des notes de bas de pages, tout un ensemble d’éléments éditoriaux qu’il faut pouvoir assembler souplement.
+  -Richesse de la structure: il faut pouvoir imbriquer des tableaux, des listes, des agrégats pour créer des structures complexes.
+  -Autonomie: quand deux systèmes échangent un document, toutes les informations doivent être incluses dans la représentation; en particulier, les données doivent être auto-décrites: le contenu vient avec sa propre description.
+  -Sérialisation: la sérialisation désigne la capacité à coder un document sous la forme d’une séquence d’octets qui peut « voyager » sans dégradation sur le réseau, une propriété essentielle dans le cadre d’un système distribué.
 
 
+  Json
+  - liste/objet/agréga
+  - tableau
+  xml
+  -noeud
 
-
+une base relationnelle : structure(le schéma)  et contenue(la base)
+ -évider redondance -> source majeur d'incoherence
+ -évider chemin d'accès privilégié
+une arboresente(doc structuré): autonomie, flexibilité
+ - pour des données régulière e d'éviter les jointure
+ 
+Quand utiliser une base documentaire ?
+ - quand les documents continnet peu ou pas de référence
+ - quand on peut se permettre la redondance total / partielle (peu de Maj)
+ - On veut traiter très gros volumes de manière "scalable" 
+ une struture régulière ? 
+ beacoup de références ? -
+ le strututure d'un document est elle fix et prévisible ?
+ 
+ Si oui,ce n'est pas nécessaire de mettre en place en nosql
 
