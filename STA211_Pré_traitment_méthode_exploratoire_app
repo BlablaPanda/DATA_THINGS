@@ -1,0 +1,106 @@
+STA211 : Méthodes exploratoires pour le pré-traitement des données (application)
+
+1.Introduction
+
+2Tranformation des variables
+
+  2.1 Variables quantitiatives
+  2.1.1 Dicrétisation
+  Pourquoi?
+  -transformation qui peut être apportée sur une variable quantitative est sa discrétisation de façon à la rendre qualitative (ordonnée).
+      -> afin de utiliser ACP/ACM
+  -plus facile d’interpréter un modèle portant sur les modalités des variables qualitatives, que sur des variables continues. 
+  - Une troisième raison est que cela permet de gérer aisément les données manquante
+  - gérer la non-linéarité dans les donnée
+  Comment ?
+   -une discrétisation ``métier’’, i.e. une discrétisation a priori, couramment employée pour l’analyse qu’on en fait ensuite. Ce type de discrétisation présente un intérêt pour l’interprétation.
+   -un découpage selon les quantiles empiriques. e type de découpage a l’avantage d’éviter d’obtenir des classes d’effectif trop faible, problématique pour de nombreuses méthodes comme la régression logistique, les SVM, voire réseaux de neurones (Tufféry (2015)), ou l’ACM.
+   -un découpage ``naturel’’ déformant le moins possible la distribution de la variable (du point de vue uni-dimensionnel). Pour cela, on peut utiliser un algorithme de clustering (k-means ou CAH par exemple) qui assurera des classes homogènes. Par ailleurs, ces stratégies fourniront un choix du nombre de classes (en particulier la CAH).
+   -autres: les arbres binaires,méthodes automatiques de discrétisation etc
+   
+  2.1.2 Linéarité
+  Condition: assurer une relation linéaire entre les variables. 
+
+  Methode
+    -régression linéaire:une variable réponse est combinaison linéaire des variables explicatives 
+    -la régression logistique:le logit de la moyenne de la variable réponse (binaire) est combinaison linéaire des variables explicatives
+    -l’analyse discriminante:elle que conditionnellement aux modalités d’une variable binaire, les variables quantitatives sont distribuées selon une loi gaussienne multivariée, dont la particularité est que la moyenne de chaque variable est combinaison linéaire des autres
+  Comment
+    -deux variables sera généralement appréciée via la visualisation du nuage de points 
+    -Quand le nombre de variables est grand  on préférera alors comparer des indicateurs de liaisons supposant la linéarité, comme le coefficient de corrélation linéaire, et d’autres ne la supposant pas, comme le coefficient de Spearman. Un écart important pourra suggérer une non-linéarité.
+    -Quand une non-linéarité est détectée, on pourra linéariser en appliquant une transformation plus où moins complexe sur les colonnes.
+    
+  2.1.3 Normalité
+  Comment 
+  La normalité d’une distribution est une hypothèse très classique
+  La déctection de la no-normalité: diagramme qq-plot,n simple histogramme, courbe de densité,coefficients d’aplatissement et d’asymétrie 
+  Comment transformer?
+  l’asymétrie positive -> transformation par le log népérien
+  inverse on pourra utiliser les puissances 2 ou 3.
+  une proportion, on envisage généralement une transformation par la fonction x↦arcsin(x−−√) (Tufféry (2007)).
+  Box et Cox: ont ainsi proposé des transformations plus génériques qui sont paramétrables.
+  
+  2.2 Variables qualitatives
+  2.2.1 Regroupement de modalités
+  
+  - def:  Il s’agit d’affecter une même modalité à des individus prenant des modalités différentes sur une même variable.
+  - il est important de préserver au mieux la liaison entre la variable qualitative (explicative) et la variable réponse
+  
+  2.2.2 Analyse factorielle
+  
+  Il est parfois nécessaire d’effectuer des transformations des variables qualitatives pour y appliquer des méthodes dédiées aux variables 
+  La façon la plus simple de procéder consiste à appliquer une ACM sur ces variables, puis d’effectuer l’analyse à partir des composantes principales plutôt que des variables d’origine. 
+  
+3 Réduction des données
+  
+  PK ?
+  
+    Débruiter les données, en éliminant une partie de l’information non pertinente, i.e. sans lien avec la structure des données
+    Faciliter l’interprétation, en réduisant le nombre de variables explicatives dans un modèle, ou en allégeant des représentations graphiques
+    Réduire les temps de calcul, ou faciliter le stockage en mémoire du jeu de données
+  
+  3.1 En lignes
+  
+  La réduction en ligne d’un jeu de données permettra essentiellement de gérer 
+  des problèmes computationnels relatifs au stockage en mémoire ou au temps de calcul
+  
+  Comment ?
+  3.1.1 Echantillonnage
+
+    l’échantillonnage simple : en effectuant un tirage aléatoire sans remise des individus du jeu de données initial.
+    l’échantillonnage systématique : en tirant des individus de façon régulière (en prenant par exemple le 1er, le 101ème, le 20ème, etc.)
+    l’échantillonnage stratifié : en définissant une partition de la population selon une variable qualitative, puis en tirant au sein de chaque ensemble, appelé strate, une certaine proportion d’individus. Cette proportion pourra correspondre au rapport du nombre d’individus dans la strate sur le nombre total d’individus (on parle d’échantillonnage proportionnel) ou non (on parle d’échantillonnage non-proportionnel). L’échantillonnage non-proportionnel peut permettre de gérer l’hétérogénéité des classes en tirant davantage d’individus dans des classes hétérogènes (nécessitant un plus grand nombre d’individus pour stabiliser les résultats) que dans des classes homogènes.
+
+  3.1.2 Classification non-supervisée  
+
+  il s’agit d’analyser séparément les sous-populations homogènes d’individus de façon exhaustive. Pour mettre en oeuvre une méthode supervisée, cette approche diminuera la variabilité sur les variables explicatives et pourra améliorer ainsi la stabilité des résultats. Néanmoins, la partition ne sera généralement pas optimale pour l’analyse dans le sens où les classes sont constituées indépendamment de l’objectif final de prédiction ou d’explication. Il est possible de palier à ce problème en utilisant d’autres méthodes de partitionnement avancées (méthodes clusterwise notamment, cf Saporta (2017)).
+ 
+ 3.2 En colonnes
+
+  Pk?
+  Quand on souhaite prédire une variable, et que le nombre de variables explicatives est grand, les modèles sont souvent peu performants car il y a trop d’instabilité dans l’estimation de leurs coefficients (c’est par exemple le cas dans les modèles de régression logistique). Ceci se produit également quand les variables explicatives sont très fortement corrélées.
+  
+ 3.2.1 Analyse factorielle
+ 
+ Non Supervisé
+ On choisira généralement un nombre de dimensions suffisamment grand pour garder une part importante de l’inertie du nuage initial (disons environ 80% pour fixer les idées)
+ méthodes Factorial k-means (Vichi and Kiers (2001)) et Reduced k-means (De Soete and Carroll (1994)).
+ 
+ Supervisé
+ régression sur composantes: à partir des variables explicatives uniquement, sans utiliser la variable réponse 
+  -La limite de cette approche est que les premières composantes ne sont pas forcément celles qui sont les plus liées à la réponse. Une première possibilité est alors d’identifier les composantes dont le rapport de corrélation avec la variable réponse est le plus élevé. 
+  +elle permet de diminuer le nombre de variables explicatives, mais en plus, les variables explicatives deviennent orthogonales ce qui résout les problèmes de colinéarité. 
+ une méthode plus avancée comme la régression PLS
+ 
+3.2.2 Classification de variables
+
+Les méthodes de classification 
+  
+  les méthodes hiérarchiques ascendantes, descendantes, et les méthodes de partitionnement direct
+  
+3.2.3 Sélection de variables
+
+Les méthodes précédentes visent essentiellement à transformer les variables initiales par d’autres variables synthétiques. Ceci à l’inconvénient de complexifier l’interprétation des résultats in fine
+elon un certain critère, le meilleur sous-ensemble des variables initiales pour prédire ou expliquer une variable réponse. De cette façon, l’analyse portera sur des variables non-transformées qu’il sera plus facile d’interpréter.
+
+4 Conclusion
