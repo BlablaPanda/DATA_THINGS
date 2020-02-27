@@ -48,6 +48,6 @@ STA211 : Méthodes exploratoires pour le pré-traitement des données (applicati
   
   2.2.2 Analyse factorielle
   
-   il est parfois nécessaire d’effectuer des transformations des variables qualitatives pour y appliquer des méthodes dédiées aux variables 
+  Il est parfois nécessaire d’effectuer des transformations des variables qualitatives pour y appliquer des méthodes dédiées aux variables 
   La façon la plus simple de procéder consiste à appliquer une ACM sur ces variables, puis d’effectuer l’analyse à partir des composantes principales plutôt que des variables d’origine. 
   
