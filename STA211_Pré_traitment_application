@@ -6,6 +6,15 @@ STA211 : Méthodes exploratoires pour le pré-traitement des données (applicati
 
 2.1 Variables quantitiatives
 2.1.1 Dicrétisation
-  1. transformation qui peut être apportée sur une variable quantitative est sa discrétisation de façon à la rendre qualitative (ordonnée).
+  Pourquoi?
+  -transformation qui peut être apportée sur une variable quantitative est sa discrétisation de façon à la rendre qualitative (ordonnée).
       -> afin de utiliser ACP/ACM
-  2.
+  -plus facile d’interpréter un modèle portant sur les modalités des variables qualitatives, que sur des variables continues. 
+  - Une troisième raison est que cela permet de gérer aisément les données manquante
+  - gérer la non-linéarité dans les donnée
+  Comment ?
+   -une discrétisation ``métier’’, i.e. une discrétisation a priori, couramment employée pour l’analyse qu’on en fait ensuite. Ce type de discrétisation présente un intérêt pour l’interprétation.
+   -un découpage selon les quantiles empiriques. e type de découpage a l’avantage d’éviter d’obtenir des classes d’effectif trop faible, problématique pour de nombreuses méthodes comme la régression logistique, les SVM, voire réseaux de neurones (Tufféry (2015)), ou l’ACM.
+   -un découpage ``naturel’’ déformant le moins possible la distribution de la variable (du point de vue uni-dimensionnel). Pour cela, on peut utiliser un algorithme de clustering (k-means ou CAH par exemple) qui assurera des classes homogènes. Par ailleurs, ces stratégies fourniront un choix du nombre de classes (en particulier la CAH).
+   -autres:  les arbres binaires,méthodes automatiques de discrétisation etc
+   
