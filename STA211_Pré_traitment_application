@@ -16,5 +16,5 @@ STA211 : Méthodes exploratoires pour le pré-traitement des données (applicati
    -une discrétisation ``métier’’, i.e. une discrétisation a priori, couramment employée pour l’analyse qu’on en fait ensuite. Ce type de discrétisation présente un intérêt pour l’interprétation.
    -un découpage selon les quantiles empiriques. e type de découpage a l’avantage d’éviter d’obtenir des classes d’effectif trop faible, problématique pour de nombreuses méthodes comme la régression logistique, les SVM, voire réseaux de neurones (Tufféry (2015)), ou l’ACM.
    -un découpage ``naturel’’ déformant le moins possible la distribution de la variable (du point de vue uni-dimensionnel). Pour cela, on peut utiliser un algorithme de clustering (k-means ou CAH par exemple) qui assurera des classes homogènes. Par ailleurs, ces stratégies fourniront un choix du nombre de classes (en particulier la CAH).
-   -autres:  les arbres binaires,méthodes automatiques de discrétisation etc
+   -autres: les arbres binaires,méthodes automatiques de discrétisation etc
    
