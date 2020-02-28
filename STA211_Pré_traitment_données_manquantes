@@ -50,4 +50,10 @@ STA211 : gestion des données manquantes
   3.1.1 Typologies des méthodes
     basique:  la moyenne, la médiane ou en tirant au hasard des données parmi celles observées.
     ->Pbm elles “détruisent” les relations entre variables.
-    
+    ->référable d’utiliser des méthodes d’imputation préservant mieux ces relations comme l’imputation par régression.
+    non paramétriques
+    hot-deck:on identifie les k individus complets les plus proches au sens d’une certaine distance de l’individu à imputer, puis on en tire un au hasard parmi les k. On imputera alors l’individu en utilisant la valeur du voisin tiré.
+    semi paramétriques
+    ajuster un modèle de régression, puis à identifier les k individus les plus proches en termes de prédiction vis-à-vis du modèle. On impute alors l’individu par la valeur observée d’un des k voisins.
+  
+    Une règle générale pour choisir les modèles d’imputation est de choisir des modèles au moins aussi complexes que la méthode qui sera appliquée sur les données imputées (Schafer (2003)), appelée modèle d’analyse
