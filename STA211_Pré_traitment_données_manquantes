@@ -42,4 +42,12 @@ STA211 : gestion des données manquantes
            L’analyse bivariée elle permettra d’identifier si des données manquantes apparaissent de façon simultanée sur deux variables
            ne analyse multivariée permettra d’identifier des variables qui ont tendance à être manquantes simultanément et à identifier des groupes d’individus dont le profil de non-réponse est similaire. 
            Des analyses bivariées ou multivariées permettront de faire le lien entre les données observées sur certaines variables et la présence des données manquantes sur d’autres.
-           
+  
+  3.Traitement des données manquantes par imputation   
+  
+  3.1 Imputation simple
+    L’imputation simple consiste à remplacer chaque donnée manquante par une unique valeur.
+  3.1.1 Typologies des méthodes
+    basique:  la moyenne, la médiane ou en tirant au hasard des données parmi celles observées.
+    ->Pbm elles “détruisent” les relations entre variables.
+    
