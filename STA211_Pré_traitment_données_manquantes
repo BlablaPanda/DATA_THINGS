@@ -57,3 +57,11 @@ STA211 : gestion des données manquantes
     ajuster un modèle de régression, puis à identifier les k individus les plus proches en termes de prédiction vis-à-vis du modèle. On impute alors l’individu par la valeur observée d’un des k voisins.
   
     Une règle générale pour choisir les modèles d’imputation est de choisir des modèles au moins aussi complexes que la méthode qui sera appliquée sur les données imputées (Schafer (2003)), appelée modèle d’analyse
+  
+    3.1.2 Imputation de plusieurs variables 
+    
+    3.1.3 Validation du modèle
+      
+      
+      
+    
