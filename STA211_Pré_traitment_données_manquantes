@@ -1,0 +1,45 @@
+STA211 : gestion des données manquantes
+
+
+  1 Introduction
+  
+  2 Les données manquantes
+  
+    -méthode suppression par liste ou étude des cas complets
+      def:l’attitude généralement adoptée par les utilisateurs est de limiter leur analyse aux individus complets
+      pbm:
+       -La première est que les individus complets ne constituent pas nécessairement un échantillon représentatif du jeu de données
+       -le e nombre d’individus complets tend à être rapidement petit dès lors que le nombre de variables est grand.
+    2.1 Vocabulaire et notations
+    2.2 Taxonomie des mécanismes
+         classés en trois groupes :
+         - les données générées complètement au hasard dites MCAR(issing completely at random)
+         - les données générées au hasard MAR(missing at random)
+         -  les données non générées au hasard MNAR (missing not at random )
+       
+          2.2.1 Mécanisme MCAR
+           
+           la probabilité d’occurrence est sans lien avec les données complètes. Sous l’hypothèse MCAR, le mécanisme R est donc indépendant de Xobs et X
+           Un mécanisme MCAR permet de considérer les individus complets comme un sous-échantillon représentatif des individus du jeu de données. 
+           pbm:la conduit à réduire la taille de l’échantillon considéré et donc à construire des estimateurs avec des variances plus grandes.
+           
+           2.2.2 Mécanisme MAR
+           
+            un dispositif des données manquantes non causé par les données non-observées, mais pouvant être dû à la partie observée. 
+            pbm:les individus complets ne sont plus un sous-échantillon représentatif de la population et l’inférence sur ces individus peut être biaisée.
+           
+           2.2.3 Mécanisme MNAR
+           
+             la probabilité d’apparition de données manquantes est en partie causée par les données non-observée Xmiss. 
+             La probabilité d’apparition d’une donnée manquante est ici liée directement à la partie non-observée des données. 
+             
+           2.2.4 Illustration
+           
+           2.3 identification des mécanismes
+           
+           méthode:  les méthodes d’analyse exploratoire univariées, bivariées et multivariées. 
+           
+           L’analyse bivariée elle permettra d’identifier si des données manquantes apparaissent de façon simultanée sur deux variables
+           ne analyse multivariée permettra d’identifier des variables qui ont tendance à être manquantes simultanément et à identifier des groupes d’individus dont le profil de non-réponse est similaire. 
+           Des analyses bivariées ou multivariées permettront de faire le lien entre les données observées sur certaines variables et la présence des données manquantes sur d’autres.
+           
