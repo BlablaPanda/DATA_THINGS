@@ -94,4 +94,25 @@ Quand utiliser une base documentaire ?
  le strututure d'un document est elle fix et prévisible ?
  
  Si oui,ce n'est pas nécessaire de mettre en place en nosql
+ 
+ 
+ Documents Struturé=imbrication des structures
+ + 
+   Pas jointure(sauf des sources différentes)
+   Pas de transaction
+   Adaptation à la distribution
+ - 
+   chemin d'accès privilégié
+   entités ne sont plus autonomes
+   Redondance->La redondance crée inhcorent
+   Pas de langage de requête
+   Pas de schéma (Pas de contrôles)
+   Pas de transaction(Ne convient pas pour bcp d'application)
+  
+  Quand utilise une base documentaire ?
+  -données très spécifiques ou faiblement struturées
+  -Peu de mise à jour, beacoup de lecture la redondance ne pose pas de pbm
+  -On veut traiter de très gros volumes de manière "scalable"
+  -De forts besoins en temps réel
+  Sinon, c'est mieux d'avoir relationnelle  (redondante, prévisible,)
 
