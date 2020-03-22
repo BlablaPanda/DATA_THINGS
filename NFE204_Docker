@@ -63,6 +63,16 @@ Définition de base
      hub.docker.com -> pour trouver l'image proposé par docker + doc
      docker run --name image -p port(machine:conteneur) -e option -d image_installé
      
+     commmande:
+     docker-mahine -> voir tous les commande pour communiquer avec la machine de docker
+     docker-machine ip
+     docker-machine stop->pour mettre la fin
+     docker COMMAND -> pour commander conteneur
+     docker image ->voir tous les image
+     docker ps -> conteaiuer fonctionne
+     docker ps -a -> voir tous installé
+     docker run (name containeur) 
+     
 3.Modélisation de bases NoSQL
 
  S.1 Document structure.
@@ -116,3 +126,66 @@ Quand utiliser une base documentaire ?
   -De forts besoins en temps réel
   Sinon, c'est mieux d'avoir relationnelle  (redondante, prévisible,)
 
+  Cassandra 
+  
+  http://b3d.bdpedia.fr/_images/cass-column-family.png
+  
+  keyspaces: contient des tables CAD une base
+ 
+  une ligne (row,document) est un identifianct row key associé ç un ensemble de paire (clé valeur)
+  une ligne est typée par un shéma.
+  
+  tables (column family) est un ensemble de rows confirmes au shcéma de la table.
+  
+  (big table, super-colonnes, version ->à voir mais peu important)
+  
+  http://b3d.bdpedia.fr/docstruct.html#le-modele-de-donnees
+  
+  installer:docker run --name mon-cassandra -p 3000:9042  -d cassandra:latest
+
+"""""Create keyspace""""
+CREATE KEYSPACE IF NOT EXISTS Movies
+       WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor': 3 };
+""""Create table""""
+create table artists (id text,
+               last_name text, first_name text,
+               birth_date int, primary key (id)
+              );
+  
+  """"inserte table"""""
+  insert into artists (id, last_name, first_name, birth_date)
+            values ('artist1', 'Depardieu', 'Gérard', 1948);
+insert into artists (id, last_name, first_name, birth_date)
+            values ('artist2', 'Baye', 'Nathalie', 1948);
+insert into artists (id, last_name, first_name)
+            values ('artist3', 'Marceau', 'Sophie');
+            
+""""insert by jason"""""
+
+insert into artists JSON '{
+     "id": "a1",
+     "last_name": "Coppola",
+     "first_name": "Sofia",
+     "birth_date": "1971"
+ }';
+ """"create type""""
+ 
+ suivante:
+
+create type artist (id text,
+                    last_name text,
+                    first_name text,
+                    birth_date int,
+                    role text);
+
+Et on peut alors créer la table movies en spécifiant que l’un des champs a pour type artist.
+
+create table movies (id text,
+                     title text,
+                     year int,
+                     genre text,
+                     country text,
+                     director frozen<artist>,
+                     primary key (id) );
+
+Notez le champ director, avec pour type frozen<artist> indiquant l’utilisation d’un type défini dans le schéma.
