@@ -1,4 +1,80 @@
 
 
 
+4.2.1 Lien entre variables explicatives et variable réponse
+4.2.1.1 Linéarité
+
+Afin d’identifier la nature du lien entre les variables quantitatives et la réponse, on représente la proportion de bons payeurs en fonction des variables quantitatives. Ce type d’analyse dans le cas d’une variable explicative continue nécessitera d’effectuer une discrétisation.
+
+On commence par identifier le lien entre la variable Creditability et la variable Duration.
+
+# calcul de la proportion de bons payeurs pour chaque valeur de la durée de credit
+cont.table<-table(don$Duration,don$Creditability)
+prof.lignes<-prop.table(cont.table,1)
+
+#calcul des bornes de l'intervalle de confiance associée
+res.binom.test<-mapply(cont.table[,1],
+                       FUN=binom.test,
+                       n=rowSums(cont.table),
+                       SIMPLIFY = FALSE)
+ci<-sapply(res.binom.test,"[[","conf.int")
+
+# représentation des proportions en fonction de la durée de credit
+# (coloration en fonction du nombre d'obervations pour la durée considéree)
+abscisses<-as.numeric(rownames(prof.lignes))
+col<-gray.colors(184,.95,0)[rowSums(cont.table)]
+
+# affichage des proportions
+plot(abscisses,
+     prof.lignes[,1],
+     pch=16,
+     col=col,
+     xlab="Durée du crédit",
+     ylab="Proportion de bons payeurs")
+
+# affichage des intervalles de confiance
+for(ii in 1:length(abscisses)){
+  segments(x0=abscisses[ii],
+           y0=ci[1,ii],
+           x1=abscisses[ii],
+           y1=ci[2,ii],
+           col=col[ii])
+
 mapply affiche seulement la dernière "plot".
+
+4.2.1.2 Identification des variables les plus discriminantes
+
+On regarde ensuite quelles sont les variables les plus liées au statut bon/mauvais payeur.
+
+#Chargement du package BioStatR
+install.packages("BioStatR")
+library(BioStatR)
+
+#calcul des rapport de corrélation
+res.eta2<-sapply(don[,var.numeric],eta2,y=don$Creditability)
+
+#tri par valeurs décroissantes
+res.eta2<-sort(res.eta2)
+
+#représentation
+par(mar=c(5, 15, 4, 2) + 0.1)#pour gérer les marges du graphique
+barplot(res.eta2,horiz = TRUE,las=2,xlab=expression(eta^2))
+
+Parmi les variables quantitatives, les liaisons les plus fortes sont observées pour les variables Duration et Credit Amount. Au contraire, les variables No.of.dependents et Duration in Current address n’apparaissent pas comme discriminantes.
+
+#Creation d'une matrice contenant les variables qualitatives et quantitatives discrètes (sans la variable Creditability)
+don.cramer<-don[,c(var.factor)]
+don.cramer<-don.cramer[,-which(colnames(don.cramer)=="Creditability")]
+
+#calcul du V de cramer entre Creditability et les autres variables non continues de don.cramer
+library(DescTools)
+res.cramer<-sapply(don.cramer,
+                   FUN=function(xx,yy){CramerV(table(xx,yy))},
+                   yy=don$Creditability)
+
+#tri par valeurs décroissantes
+res.cramer<-sort(res.cramer)
+
+#représentation
+par(mar=c(5, 15, 4, 2) + 0.1)
+barplot(res.cramer,horiz = TRUE,las=2,xlab="V de Cramer")
