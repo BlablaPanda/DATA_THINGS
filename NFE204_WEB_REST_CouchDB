@@ -1,0 +1,33 @@
+I web et REST
+1.WEB=immense base données documentaires et web est constitué de ressources
+  Message codés selon le protocole HTTP , le contenu de message est un document souvent en html
+  Ressources sont identifiées par URL
+  curl envoyer des requetes : curl v pour voir l'exeacte requete et la reponse ( entete + message)
+2.REST = une définition de services web baseée sur les standards du web
+    les messages se font en HTTP structurées en XML ou Json
+ 
+ 3. entre client et serveur
+    server selon le chemin pour retrouver les resources
+    après avoir trouver la resource on a 4 opérations possible:
+    Get:  lit une resource
+    Put: Crée une nouvelle resource ( ou la remplacer)
+    Post: envoie un message(demande de service) à une resource existante
+    Delete: détruit une ressource
+    
+    
+  II un système No SQL basé sur REST couchDB
+  
+    pas de schéma, non normalisé
+    échanges client/serveur basées sur REST
+    
+    installer couchdb sur un post local
+    voir interface:https://localhost:5984/_utils/
+    
+    Autre source de données: les données publiques. Allez voir par exemple sur
+
+        https://www.data.gouv.fr/fr/.
+        http://data.iledefrance.fr/page/accueil/
+        http ://data.enseignementsup-recherche.gouv.fr/
+        http://www.data.gov/ (Open data USA)
+        La société OpendatSoft (http://www.opendatasoft.fr) propose non seulement des jeux de données, mais de nombreux outils d’analyse et de visualisation.
+
