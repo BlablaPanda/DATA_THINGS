@@ -1,0 +1,53 @@
+I Definitiuon
+
+MapReduce = framework d'exécution
+
+un processus en deux phase est appliqué à une collection d'items ( document structuré, image,text)
+à chaque phase; on applique une fonction fournie par le développeur. -> faire des processus parelles
+
+deux phases:
+P1.atelier préparation:traitement individuel,
+P2.atelier assemblé:traitement collectif
++P distribution
++P tri
+
+Proposé par Google 2004.
+
+->Remarques:
+Parallélisation=indépendance des données et des transformations
+
+->avantage:
+  scalabilités ajouter autant de productions avec les ateliers
+  Robustees ne remet pas en cause l'ensemble de production
+  
+ ->remarques avec tirage
+ pour trier, il faut etiqueter.
+ 
+ ->MapReduce charger de faire la distribution et le tri
+ 
+ 1.phase de map (préparation) Fmap():
+  application des fonction(cusinier) -> obtenir une valeur -> déplacer dans un accumulateur(panier des fruits)
+ 2.phase aasemble Fred()
+ 
+ Vocabulaire
+ Item
+ fonction de map (cusinier)
+ Paire intermédiaire étiquette : groupe
+ Groupe intermediares un même groupe
+ Function de reduce: implate la transformation appliquée un groupe (presseur)
+ 
+ 
+ II.Exemple avec MangoDB
+ var mapRealisateur = function(){
+          emit(this.director._id,this.title)}
+  #emit( groupe, valeur )
+  
+  var reduceRealisateur=function(directorid,title){
+   var res=new Object();
+   res.director=directorid;
+   rest.films=titres;
+   return res;
+  }
+  # function prendre directorid avec une collection ( liste de titles)
+  # return tous les groupes avec leurs collections
+ 
