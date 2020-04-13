@@ -59,9 +59,7 @@ Définition de base
      docker ps (conteneur installé)
      docker start ID_conteneur (lancer conteneur)
      docker run name_conteneur (installer conteneur)
-    -installer image
-     hub.docker.com -> pour trouver l'image proposé par docker + doc
-     docker run --name image -p port(machine:conteneur) -e option -d image_installé
+   
      
      commmande:
      docker-mahine -> voir tous les commande pour communiquer avec la machine de docker
@@ -71,8 +69,11 @@ Définition de base
      docker image ->voir tous les image
      docker ps -> conteaiuer fonctionne
      docker ps -a -> voir tous installé
-     docker run (name containeur) 
-     
+     docker run (name containeur)  -> create a new container
+     #installer image
+     hub.docker.com -> pour trouver l'image proposé par docker + doc
+     docker run --name (containeur) -p port(machine:conteneur) -e (option) -d (image_installé:version)
+
 3.Modélisation de bases NoSQL
 
  S.1 Document structure.
