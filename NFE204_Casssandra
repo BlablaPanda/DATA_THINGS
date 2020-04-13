@@ -1,3 +1,7 @@
+#execute cql shell
+docker exec -it mon-cassandra cqlsh 
+#exite cqlsh
+exite;
 
 #Importer csv to container
 docker cp restaurants.csv 06f8cc22e85a:/
