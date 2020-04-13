@@ -1,0 +1,5 @@
+
+#Importer csv to container
+docker cp restaurants.csv 06f8cc22e85a:/
+#docker cp path-to-file/    docker-container-ID:/
+#docker cp src/. mycontainerID:/target 
