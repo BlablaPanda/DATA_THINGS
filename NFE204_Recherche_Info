@@ -18,6 +18,45 @@ recall=vrais positif/vrais positif + faux négatif (voir le diapo)
   ->solution1+:elimiler les zero et mettre l'id de doc
   ->solution1++ trier la liste
   
+II.Indexation
+
+un moteur de recherche essaie d'analyser des documents
+1.analyser le type des données
+2.tansferer les textes bruts à une recherche prciseé.
+
+Role d'analyse
+normalisation/unification pour être moins dépendant de la formùe du texte
+par exemple "Loup" -> louve,loup,loups
+traduction=> Synonoymes -> loup=wolf loup=pretateur ?
+! plus on normalise plus diminue la précision
+! plus on noramlise plus on améliore le rappel
+! le même tranformation doit être applicquée aux documents et à la requête
+
+Les phases de l'analyse
+-decter les langues,
+-Tokenization : découpage du texte en "mots"
+-Normalisation : majuscules ? acronymes ? apostrophes ? accents ?
+-Stemming("racinisation") lemmatization 
+   stemming morphologique: retire les pluriels, marque de genre, genre, conjuaison
+   stemming lexial : 
+   stemming phonétique: corectionfautes de frappes
+-stop words, quels mots garder ? (le un à de...)
+
+III. Elerstique search
+
+Le schéma donne la liste de tous les champs d'un document.
+Cela permet de faire la recherche sur les documents.
+"mappings"{
+"movie" (type):{ 
+"actors"(type):{ "type":"nested"(tableau objet)
+champs predefini
+"_all": concatenation de tous les caractères
+"_source": index + base documentaire (- pris bcp de memoire, difficile de modifier le shema de document car il faut recréer l'index)
+
+index indique si le champ peut être utilisé dans une recherche
+store indique si la valeur du champ est stockée dans l'index l'option store permet de considérer elesticsearche comme une base de données
+c'estpas une bonne idée d'utiliser elestique serarch comme une base de donnée (pbm de maj)
+c'est mieux d'utiliser le moteur de recherche pour trouver les resources de données et cherche les données dans le resource
 
 quize ? ? c B C ? B précison A rappel C C 
 cout d'une recherche un index avec inversé->B
