@@ -78,10 +78,23 @@ docker run -d --name es1  -p 9200:9200 -p 9300:9300 elasticsearch:2.4 \
 sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' es1
 
 
+Connect par navigateur: 
+machine ip docker:porte conteneur
+http://192.168.99.100:9200
 
+interface:
 
-Connect par navigateur: elastic
-par REST
+docker exec es1 plugin install lmenezes/elasticsearch-kopf ->http://192.168.99.100:9200/_plugin/kopf/#!/cluster
+docker run -p 5000:5000 elastichq/elasticsearch-hq ->http://192.168.99.100:5000
+
+importation (cd le repertoire de fichier json):
+
+curl -s -XPOST http://192.168.99.100:9200/_bulk/ --data-binary @movies-elastic.json
+
+par navigateur pour interoger les données:
+
+http://192.168.99.100:9200/nfe204/movies/_search?q=Logan
+
 
 quize ? ? c B C ? B précison A rappel C C 
 cout d'une recherche un index avec inversé->B
