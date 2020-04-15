@@ -58,6 +58,31 @@ store indique si la valeur du champ est stockée dans l'index l'option store per
 c'estpas une bonne idée d'utiliser elestique serarch comme une base de donnée (pbm de maj)
 c'est mieux d'utiliser le moteur de recherche pour trouver les resources de données et cherche les données dans le resource
 
+Moteurs de recherche
+
+Opensource: Solr et ElastiSearch a basé sur l'index reversé: Lucene (par apache).
+Archetecture: Base documentiare +base d'index documentaire
+Elasticsearch:
+  logstash,l'ETL pour extraire,transformer et charger les données
+  ElasticSearch, le moteur 
+  Kibana pour produire des tableaux de bord de surveillance
+
+
+Installation via Docker image
+1.Commençons par l’installation avec Docker. Voici une commande qui devrait fonctionner sous tous les systèmes et mettre ElasticSearch en attente sur le port 9200.
+docker run -d --name es1  -p 9200:9200 -p 9300:9300 elasticsearch:2.4 \
+       -Des.index.number_of_shards=1 \
+       -Des.index.number_of_replicas=0
+2.Vous pouvez obtenir l’IP de votre conteneur (que l’on a nommé es1) avec la commande Bash suivante:
+
+sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' es1
+
+
+
+
+Connect par navigateur: elastic
+par REST
+
 quize ? ? c B C ? B précison A rappel C C 
 cout d'une recherche un index avec inversé->B
 énonceé rechere booléenne ->B
