@@ -94,6 +94,35 @@ curl -s -XPOST http://192.168.99.100:9200/_bulk/ --data-binary @movies-elastic.j
 par navigateur pour interoger les données:
 
 http://192.168.99.100:9200/nfe204/movies/_search?q=Logan
+http://192.168.99.100:9200/_plugin/kopf
+
+
+#Recherche Boolean
+0. http://192.168.99.100:9200/_plugin/kopf -> reset
+1.méthode: post + path: nfe204/_search
+
+
+{
+  "query": {
+    "query_string": {
+      "query": "meurtrier"
+    }
+  }
+}
+
+
+
+#Analyse des documents 
+
+couper les données -> analyse de type de données-> transformations(femin/masculant/syno)
+!Plus on normalise plus on diminue la précsion mais plus on améliore le rappel
+!Transformation -> à documents mais aussi à requoete
+
+déf:
+Tokenization: découpage du texte
+Normalisation: majuscules acronymes
+Stemming/lemmatization: racinisation
+Stop words: quels mots garder ? (le,un,à,de -> peu informatifs) 
 
 
 quize ? ? c B C ? B précison A rappel C C 
@@ -102,6 +131,7 @@ cout d'une recherche un index avec inversé->B
 exo1
 q1=50/60
 q2=rien
+
 
 Quiz
 1.NoSql vs elstic search ->index est rigide, c'est diffcile de changer doc B est fausse
