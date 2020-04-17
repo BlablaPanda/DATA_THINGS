@@ -1,0 +1,13 @@
+<h>Recherche Booléemes
+soit exist 1 soit exist 0
+
+<h>Classement
+similarité classée par score
+la requête q et document d sont placé dans un meme espace métrique
+une fonction f produit un descripteur à partir d'un document
+
+vector de description (des vocabulaire pour descripre le document)
+si on a toruvé un mot 1 sinon =0 
+l'ordre des mots dans le document est ignoré (approche "bag of words")
+->calculer la distance euclidienne (on utilise toujours la meme function) 
+  (1-1)carré .. (1-0) carré... 
