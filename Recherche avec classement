@@ -3,6 +3,10 @@ soit exist 1 soit exist 0
 
 <h>Classement
 similarité classée par score
+
+Espace métrique:où la requête et le documents sont placé, et doté d'une fonction de distance
+discripteur : produit par une fucntion de distance souvent sous la forme d'un vecteur appelé feature vector a partir d'un document
+
 la requête q et document d sont placé dans un meme espace métrique
 une fonction f produit un descripteur à partir d'un document
 
