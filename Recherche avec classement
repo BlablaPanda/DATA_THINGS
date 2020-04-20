@@ -15,3 +15,25 @@ si on a toruvé un mot 1 sinon =0
 l'ordre des mots dans le document est ignoré (approche "bag of words")
 ->calculer la distance euclidienne (on utilise toujours la meme function) 
   (1-1)carré .. (1-0) carré... 
+
+
+1 .Fréquenct dans un document -> normalisation par rapport longueur d'un doc
+
+fréquence du terme: tf
+
+2.rare dans la collection
+
+nb collection contient terme/nb collection
+
+frequence inverse des documents (inverse document frenquency idf)
+plus terme rare plus idf grand 
+plus terme courant -> 1  idf(t)=log(1)=0
+
+3 term frequency - inverse Document Frency (tf-idf)
+
+tfidf(t,d)=
+descr: vecteur composé des poids -> très couteuse
+le cosinus est une function décroisante sur l'intervalle [0,90]
+le cosinus  minimax 90° 0 -  maximum 0° 1
+produit scalaire de deux vecteurs= v1.v2=||v1||×||v2||×cosθ
+
