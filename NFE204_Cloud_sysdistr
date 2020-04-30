@@ -1,0 +1,58 @@
+>limite d'une machine
+on utilise plieurs machine.
+
+infrastructure:
+
+3 couche
+couche pysique
+  serveurs armoir(rack)
+  servers lien inter-rack pysiquement à distance
+
+systeme de Données: 
+  NoSql: clé-valeur(mongo db)/documentaire,tabluaires:big table(cassandra),graphes
+
+temps réel / analytique
+
+louer une machine Amazon,EC2,OVH,Gandi.
+
+
+Systemes distribué
+ensemble de composants logiciels, ou noeuds , répartis sur une grappe de serveurs, coopérant pour une tache precise.
+ces noeuds communiquent par envoie message(acun partage de mémoire) chaque noeud est en écoute sur un port réseau
+
+deux type de systemes distribué
+
+maitre-esclave: 
+maitre: communiquer avec le client et surveiller les autres noeuds et le systeme distribué.
+!!!!role essentiel du maitre : single point of failure (on met deux maitre pour éviter la faille)
+maitre et esclave peut être sur une meme machine.
+
+multi-noeuds
+chaque noeuds autonome (elastique search)
+
+Systeme NoSql
+Un systeme NoSQL est un systeme distribue dont la tache est la  gestion des donnees presistantes dans  un environement cloud.
+1.recherche et mise a jour des données
+2.adaptation automatique aux des matérielles
+3.performances"scalables"
+4.Reprise sur pannne automatisée
+
+deux types systeme nosql
+systeme temps réel: elastique search
+systeme analyique: hadope, cassancdra
+
+Commençons avec la mise en mode distribué du plus basique des outils de stockage: les systèmes de fichier. En 2003, des ingénieurs de Google publient un article sur le Google File System (GFS). En 2004, un nouvel article explique la méthode de traitement à grande échelle utilisée en interne par Google, MapReduce. Puis, en 2006, c’est un système de plus haut niveau qui est dévoilé, BigTable, sorte de table répartie basée sur un modèle de données flexible. Ces publications ont donné un grand coup de fouet à la communauté du logiciel libre qui a aussitôt lancé des projets pour développer des systèmes équivalents (Google ne diffuse pas son code). Cela a donné le système Hadoop, qui comprend entre autres HDFS (clone de GFS), HBase (clone de BigTable) et un environnement d’exécution MapReduce. Parmi les systèmes comparables, citons Cassandra, inspiré de BigTable/HBase, développé initialement par Facebook. Tous ces systèmes peuvent être classés dans la catégorie que nous appellerons systèmes analytiques: ils stockent des données massives dans un environnement distribué, et permettent l’application de traitements distribués à l’ensemble de ces données.
+
+Un autre article très influent est la publication consacrée en 2007 au système interne d’Amazon, Dynamo. Cette fois on est plutôt dans la catégories des systèmes temps réels puisque l’article explique la structure distribuée utilisée pour gérer les clients d’Amazon, leur panier, et la haute disponibilité requise même à l’échelle de centaines de millions de transactions concurrentes. Dynamo a été cloné par Voldemort, et ses principes (l’article est très riche) repris dans de très nombreux systèmes: MongoDB, Riak, CouchDB, etc. En résumé, ces systèmes s’appuient sur un modèle de données (clé, valeur) extrêmement simplifié, et fournissent des primitives d’accès put(k, v) (pour créer/mettre à jour) et v = get(k) pour rechercher. MongoDB et CouchDB se distinguent entre autres par un modèle de données plus riche (JSON).
+
+Arrêtons-là le panorama (très incomplet). Ce qu’il faut retenir essentiellement, c’est que:
+
+        ces systèmes fournissent nativement une adaptation à une infrastructure distribuée;
+        on peut distinguer les systèmes à orientation analytique (traitements longs appliqués à une partie significative des données à des fins statistiques) et temps réel (accès instantané, quelques millisecondes, à des unités d’informations/documents);
+
+Malgré le côté foisonnant de la scène NoSQL, tous s’appuient sur quelques principes de base que nous allons étudier dans la suite du cours; connaissant ces principes, il est plus facile de comprendre les systèmes. Une dernière précision: aucune normalisation dans le monde du NoSQL. Choisir un système, c’est se lier les mains avec un modèle de données, un stockage, et une interface spécifique.
+
+Une dernière remarque pour finir: les systèmes NoSQL les plus sophistiqués (Cassandra par exemple) tendent lentement à évoluer vers une gestion de données structurées, équipée d’un langage d’interrogation qui rappelle furieusement SQL. Bref, on se dirige vers ce qui ressemble fortement à du relationnel distribué.
+Les systèmes de calcul distribués
+
+Enfin la dernière couche de notre architecture est constituée de systèmes de calcul distribués qui s’appuient en général sur un système de stockage NoSQL pour accéder aux données initiales. Le premier système de ce type est Hadoop, équipé d’un moteur de calcul MapReduce. Une alternative plus sophistiquée est apparue en 2008 avec Spark, qui propose d’une part des opérations plus complètes, d’autre part un système de gestion des pannes plus performant. D’autres systèmes plus ou moins équivalents existent, dont Flink qui est spécialisé pour le traitement de grand flux de données.
