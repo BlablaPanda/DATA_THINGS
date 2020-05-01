@@ -56,3 +56,22 @@ Une dernière remarque pour finir: les systèmes NoSQL les plus sophistiqués (C
 Les systèmes de calcul distribués
 
 Enfin la dernière couche de notre architecture est constituée de systèmes de calcul distribués qui s’appuient en général sur un système de stockage NoSQL pour accéder aux données initiales. Le premier système de ce type est Hadoop, équipé d’un moteur de calcul MapReduce. Une alternative plus sophistiquée est apparue en 2008 avec Spark, qui propose d’une part des opérations plus complètes, d’autre part un système de gestion des pannes plus performant. D’autres systèmes plus ou moins équivalents existent, dont Flink qui est spécialisé pour le traitement de grand flux de données.
+
+#S2 Scalabilité
+Un système est scalable si ses performances sont proportionnelles aux ressources qui lui sont allouées
+
+système:un systeme distribution de gestion de données
+ressources sont les composants matérels (serveurs ,conectique)
+performance : latence temps d'accès à un doc
+              débit temps de parcours d'une collection
+ rapport performance/sources: propotionnel
+
+id de la vidée, signature -> si signature = ->doublant
+
+condition:
+données équitablement réparties
+traitement esentiellement local
+limitation des transferts réseaux, entre les serveurs et vers le client
+acceptable<>scalable
+
+
