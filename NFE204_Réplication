@@ -1,0 +1,25 @@
+Tolérance aux pannes
+Scalabilité
+
+*nb de replication
+2 minmum 3 une sécurité total
+un serveur S1 transmet la demande d'écriture à un ou plusieurs autres serveurs
+S2 ...Sn créant des replication copies
+S1 rend la main au client.
+->Synchrone lent mais cohérent ou asynchrone rapide mais incohérent
+
+
+
+Le théorème CAP
+
+Un système distribué orienté données ne peut satisfaire à chaque instahnt que deux des trois propriétés suivantes
+
+        la cohérence (le « C »): toute lecture d’une donnée accède à sa dernière version
+        la disponibilité (le « A » pour availability): toute requête reçoit une réponse
+        la tolérance au partitionnement (le « P »): le système continue de fonctionner même en cas de partionnement réseau.
+
+Il faut bien sacrifier l’un des deux et on se retrouve donc devant un choix AP ou CP: le côté AC ressemble bien à une impasse.
+
+ACID
+
+Atomicité,cohérence,isolation,durabilité
