@@ -15,6 +15,10 @@ client  -put/acquit- noeud ->Log (séquentielle) quand il y a en panne pour recu
                 ->Ram  fush-> Base 
 
 
+Cas Partitionnement Réseau:
+-> groupe sans maitre -> trouver nouveau maitre dans le groupe majorité et ancien maitre est dégardé.
+
+
 Le théorème CAP
 
 Un système distribué orienté données ne peut satisfaire à chaque instahnt que deux des trois propriétés suivantes
@@ -29,6 +33,9 @@ ACID
 
 Atomicité,cohérence,isolation,durabilité
 
-Cas Partitionnement Réseau:
--> groupe sans maitre -> trouver nouveau maitre dans le groupe majorité et ancien maitre est dégardé.
+
+#MangoDB réplication et reprise sur pannne
+
+Une grappe de serveurs partageant des copies d’un même ensemble de documents est appelée un replicat set (RS)
+
 
