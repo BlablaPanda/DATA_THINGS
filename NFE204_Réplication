@@ -9,6 +9,11 @@ S1 rend la main au client.
 ->Synchrone lent mais cohérent ou asynchrone rapide mais incohérent
 
 
+Pour éviter la latence disque: le fichier journal
+
+client  -put/acquit- noeud ->Log (séquentielle) quand il y a en panne pour recuperer 
+                ->Ram  fush-> Base 
+
 
 Le théorème CAP
 
@@ -23,3 +28,7 @@ Il faut bien sacrifier l’un des deux et on se retrouve donc devant un choix AP
 ACID
 
 Atomicité,cohérence,isolation,durabilité
+
+Cas Partitionnement Réseau:
+-> groupe sans maitre -> trouver nouveau maitre dans le groupe majorité et ancien maitre est dégardé.
+
