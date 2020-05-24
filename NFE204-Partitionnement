@@ -1,0 +1,16 @@
+#Principes généraux
+
+une partition : 
+découpage, les parties sont nommées fragments(shard)
+maintenir un répoertoire indiquant que telle clé se trouve dans tel fragment sur tel serveur
+->répartition de charge
+
+Techniques de partitionnement
+
+intervalle: documents tirés sur la clé, puis groupés par intervalles:mangoDB, Hbase
+hachage: la clé avec répertoire  de hachage
+
+Routage et stockage en distribué
+
+routeur= master,balancer, config server
+fragment=chunk,tablet,region,bucket
