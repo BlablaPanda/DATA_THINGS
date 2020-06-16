@@ -14,3 +14,13 @@ Routage et stockage en distribué
 
 routeur= master,balancer, config server
 fragment=chunk,tablet,region,bucket
+
+Partitionnement par hachage
+
+structure de routage est en fonction de hachage.
+h()->adresse
+les operations:
+get(i): calculer r=h(i) et accéder au fragment dont l'adress est a r chercher le document en mémoire
+put(i,d): calculer r=h(i) et inserser d dans le fragmenet dont l'adresse est ar:
+delete(i):comme le recherche avec l'effacement du document trouvé
+range(i,j): pas possible au une strucutre par hachage il faut fair un parours sequentiel complet
