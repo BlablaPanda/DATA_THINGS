@@ -1,0 +1,6 @@
+#Mutual Information
+
+-Mutual information describes relationships in terms of uncertainty. The mutual information (MI) between two quantities is a measure of the extent to which knowledge of one quantity reduces uncertainty about the other. If you knew the value of a feature, how much more confident would you be about the target?
+
+-The entropy of a variable means roughly: "how many yes-or-no questions you would need to describe an occurance of that variable, on average.The more questions you have to ask, the more uncertain you must be about the variable. Mutual information is how many questions you expect the feature to answer about the target
+
